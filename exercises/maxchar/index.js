@@ -5,6 +5,20 @@
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
 
-function maxChar(str) {}
+function maxChar(str) {
+  const chars = {}
+  let max_char = 0
+  let max = ""
+  for(let char of str){
+    chars[char] = chars[char] + 1 || 1;
+  }
+  for(let char in chars){
+    if(chars[char] > max_char){
+      max_char = chars[char]
+      max = char
+    }
+  }
+  return max
+}
 
 module.exports = maxChar;
