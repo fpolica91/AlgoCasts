@@ -19,6 +19,7 @@
 
 
 
+
 function palindrome(str) {
   if(str.length <=1) return true
   let firstLetter = str[0];
