@@ -7,6 +7,30 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+/**
+ * Using recursion we see that the first case is base, if str.length is less or equal to one
+ * we return true. We also grab the first and the last letters from the string
+ * form example hello, first letter is h and last o, impossible to be a palindrome.
+ * if the first and the last words are equal we can continue. 
+ * substring removes part of the string in our last example given the code it would remove ell
+ * 
+ * @param {*} str 
+ */
+
+
+
+function palindrome(str) {
+  if(str.length <=1) return true
+  let firstLetter = str[0];
+  let lastLetter = str[str.length -1]
+
+  if(firstLetter === lastLetter){
+    let stringWithoutFirstAndLastLetters = str.substring(1, str.length -1)
+    return palindrome(stringWithoutFirstAndLastLetters)
+  }else{
+    return false
+  }
+ 
+}
 
 module.exports = palindrome;
