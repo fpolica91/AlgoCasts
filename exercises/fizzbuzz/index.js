@@ -11,7 +11,54 @@
 //   fizz
 //   4
 //   buzz
+// function fizzBuzz(n) {
+//   if(n <= 0) return;
+//   if(n % 3 === 0 && n % 5 !==0) {
+//     console.log('fizz')
+//   } 
+//   else if(n % 5 === 0 && n % 3 !==0){
+//     console.log('buzz')
+//   }
+//   else if(n % 3 === 0 && n % 5 === 0) {
+//     console.log("fizzBuzz")
+//   }
+//   else console.log(n)
+//   fizzBuzz(n -1)
+// }
 
-function fizzBuzz(n) {}
+/**
+ * 
+ * @param {
+ *   we say if n =0 return, this is break statement
+ *   print according to condition
+ *   call function recursively substracting a number to at some pointt meet our break condition
+ * } n  
+ */
+
+function fizzBuzz(n) {
+  if(n < 1) return;
+
+  
+  
+  else if(n % 3 === 0 && n % 5 !==0) {
+    console.log('fizz')
+  } 
+  else if(n % 15 === 0){
+    console.log("fizzbuzz")
+  }
+  else if(n % 5 === 0 && n % 3 !==0) {
+    console.log('buzz')
+  }
+
+  else if(n === 1) console.log(1)
+
+  else {
+    console.log(n)
+   }
+  
+
+   fizzBuzz(n -1)
+ 
+}
 
 module.exports = fizzBuzz;
